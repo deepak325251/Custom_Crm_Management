@@ -1,0 +1,46 @@
+<odoo>
+    <record id="view_crm_stage_history_tree" model="ir.ui.view">
+        <field name="name">crm.stage.history.tree</field>
+        <field name="model">crm.stage.history</field>
+        <field name="arch" type="xml">
+            <tree string="Stage History">
+                <field name="lead_id"/>
+                <field name="previous_stage"/>
+                <field name="new_stage"/>
+                <field name="changed_by"/>
+                <field name="changed_on"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_crm_stage_history_form" model="ir.ui.view">
+        <field name="name">crm.stage.history.form</field>
+        <field name="model">crm.stage.history</field>
+        <field name="arch" type="xml">
+            <form string="Stage History">
+                <sheet>
+                    <group>
+                        <field name="lead_id"/>
+                        <field name="previous_stage"/>
+                        <field name="new_stage"/>
+                        <field name="changed_by"/>
+                        <field name="changed_on"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_crm_stage_history" model="ir.actions.act_window">
+        <field name="name">Stage History</field>
+        <field name="res_model">crm.stage.history</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>View all changes made to CRM stages.</p>
+        </field>
+    </record>
+
+    <menuitem id="crm_stage_history_root" name="Stage History" parent="crm.crm_menu_config" sequence="2" action="action_crm_stage_history"/>
+
+</odoo>

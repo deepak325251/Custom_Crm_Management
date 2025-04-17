@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_stage_history_user,crm.stage.history.user,model_crm_stage_history,base.group_user,1,0,0,0
+access_crm_stage_history_manager,crm.stage.history.manager,model_crm_stage_history,base.group_system,1,1,1,1
+access_lead_stage_view,lead.stage.view,model_lead_stage_view,base.group_system,1,1,1,1

@@ -1,0 +1,25 @@
+<odoo>
+    <record id="view_lead_stage_view_tree" model="ir.ui.view">
+        <field name="name">lead.stage.view.tree</field>
+        <field name="model">lead.stage.view</field>
+        <field name="arch" type="xml">
+            <tree string="Lead Stage View">
+                <field name="lead_id"/>
+                <field name="lead_name"/>
+                <field name="current_stage"/>
+                <field name="last_changed_stage"/>
+                <field name="changed_by"/>
+                <field name="changed_on"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_lead_stage_view" model="ir.actions.act_window">
+        <field name="name">Lead Stage History</field>
+        <field name="res_model">lead.stage.view</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="crm_menu_lead_stage_view" name="Lead Stage History"
+              parent="crm.crm_menu_config" action="action_lead_stage_view" sequence="2"/>
+</odoo>
